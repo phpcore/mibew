@@ -551,7 +551,7 @@ function get_month_selection($fromtime, $totime)
 	$result = array();
 	do {
 		$current = mktime(0, 0, 0, $month, 1, $year);
-		$result[date("m.y", $current)] = strftime("%B, %Y", $current);
+		$result[date("m.y", $current)] = utf8_encode(strftime("%B, %Y", $current));
 		$month++;
 		if ($month > 12) {
 			$month = 1;
